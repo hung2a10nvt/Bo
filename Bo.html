@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bơ Cute</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="audio-player" autoplay controls>
+      <source src="assets/rose.mp3" type="audio/mp3">
+    </audio>
+      
+    <script src="js/three.min.js"></script>
+    <script src="js/MeshSurfaceSampler.js"></script>
+    <script src="js/TrackballControls.js"></script>
+    <script src="js/simplex-noise.js"></script>
+    <script src="js/OBJLoader.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/part2.js"></script>
+    <!-- Add the new external script here -->
+    <div id="part2" style="display: none">
+      <div class="snow-ball-container">
+        <div class="snow-ball"></div>
+        <div class="snow-ball"></div>
+        <div class="snow-ball"></div>
+        <div class="snow-ball"></div>
+        <div class="snow-ball"></div>
+      </div>
+      <div class="text-content">
+        25/11/2024, Tomsk, không nhân dịp gì cả. 
+
+        Bơ yêu dấu, anh viết những lời này 10 phút trước khi em ngủ dậy. Đêm qua em đã mong được 2 ngày suy nghĩ, nhưng anh nghĩ lại rồi, anh không cho nữa. Anh từng nghe nhiều người bảo rằng, ở bên anh cảm giác thật an toàn. Nhưng có ý nghĩa gì nếu người anh yêu thương nhất lại thấy điều ngược lại nhỉ. Mình cùng nhau vẽ nên nhiều dự định, nhiều tương lai, và anh không mong cái nào trong đó xảy ra nếu không có em cả. Em biết mà, anh đã sửa được nhiều tính xấu, em từng bảo em muốn có tình yêu mà cả 2 người đều không ngừng học hỏi, vậy hãy cho chúng ta thêm thời gian đi, anh thật sự muốn mà. Tới cuối cùng thì, anh vẫn muốn được yêu em, và anh mong em sẽ hiểu được trong mắt anh em đặc biệt tới thế nào.
+
+        "Nếu nước mắt, mà em biết là rất hiếm thấy ở anh; nếu sự chống chếnh khi phải cách xa em, một tâm trạng mà em không thể không nhận thấy trong suốt cuộc tình thấp thỏm này; nếu những gì anh đã nói và làm và sẽ tiếp tục nói và làm... không đủ chứng minh rằng tất cả ý nghĩ của anh đều hướng về em, thì người yêu của anh ơi, anh cũng không còn biết dâng lên em bằng chứng nào thêm nữa."
+
+        TYH.
+      </div>
+
+      <div class="tree">
+        <svg
+          class="tree__star"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 113.32 108.44"
+          style="--delay: 0"
+        >
+          <path
+            d="M90.19 104.33L57.12 87.38 24.4 105l5.91-36.69L3.44 42.65l36.72-5.72 16.1-33.5L73.06 36.6l36.83 4.97-26.35 26.21z"
+            fill="none"
+            stroke-width="6.88"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+        <div class="tree__ring" style="--index: 1">
+          <div class="tree__bauble"></div>
+          <div class="tree__bauble"></div>
+        </div>
+        <div class="tree__ring" style="--index: 2">
+          <div class="tree__bauble"></div>
+          <div class="tree__bauble"></div>
+        </div>
+        <div class="tree__ring" style="--index: 3">
+          <div class="tree__bauble"></div>
+          <div class="tree__bauble"></div>
+        </div>
+        <div class="tree__ring" style="--index: 4">
+          <div class="tree__bauble"></div>
+          <div class="tree__bauble"></div>
+        </div>
+        <div class="tree__ring" style="--index: 5">
+          <div class="tree__bauble"></div>
+          <div class="tree__bauble"></div>
+        </div>
+        <div class="tree__ring" style="--index: 6">
+          <div class="tree__bauble"></div>
+          <div class="tree__bauble"></div>
+        </div>
+        <div class="tree__ring" style="--index: 7">
+          <div class="tree__bauble"></div>
+          <div class="tree__bauble"></div>
+        </div>
+        <div class="tree__ring" style="--index: 8">
+          <div class="tree__bauble"></div>
+          <div class="tree__bauble"></div>
+        </div>
+        <div class="tree__ring" style="--index: 9">
+          <div class="tree__bauble"></div>
+          <div class="tree__bauble"></div>
+        </div>
+        <div class="tree__ring" style="--index: 10">
+          <div class="tree__bauble"></div>
+          <div class="tree__bauble"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById('audio-player').muted = false;
+      const audio = document.getElementById('audio-player');
+      audio.onplay = () => {
+        console.log("Audio is playing.");
+      };
+      audio.onerror = (error) => {
+        console.error("Error playing audio:", error);
+      };
+      document.body.addEventListener('click', function() {
+  const audio = document.getElementById('audio-player');
+  audio.play(); 
+});
+
+    </script>
+  </body>
+</html>
